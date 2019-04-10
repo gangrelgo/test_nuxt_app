@@ -3,17 +3,25 @@
     <div class="half-side">
       <nav class="menu-column">
         <ul class="menu-list">
-          <li class="menu-item menu-item-active">
-            <nuxt-link to="/" class="menu-link" >Main</nuxt-link>
+          <li class="menu-item">
+            <nuxt-link
+              to="/"
+              class="menu-link">Main</nuxt-link>
           </li>
           <li class="menu-item">
-            <nuxt-link to="/about" class="menu-link">About</nuxt-link>
+            <nuxt-link
+              to="/about"
+              class="menu-link">About</nuxt-link>
           </li>
           <li class="menu-item">
-            <nuxt-link to="/product" class="menu-link">Products</nuxt-link>
+            <nuxt-link
+              to="/product"
+              class="menu-link">Products</nuxt-link>
           </li>
           <li class="menu-item">
-            <nuxt-link  to="/contacts" class="menu-link">Contacts</nuxt-link>
+            <nuxt-link
+              to="/contacts"
+              class="menu-link">Contacts</nuxt-link>
           </li>
         </ul>
       </nav>
@@ -21,17 +29,26 @@
     <div class="half-side p-left-social">
       <ul class="social-list">
         <li class="social-item">
-          <a class="social-link" href="#" target="_blank">
+          <a
+            class="social-link"
+            href="#"
+            target="_blank">
             <i class="fab fa-twitter"></i>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-link" href="#" target="_blank">
+          <a
+            class="social-link"
+            href="#"
+            target="_blank">
             <i class="fab fa-linkedin-in"></i>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-link" href="#" target="_blank">
+          <a
+            class="social-link"
+            href="#"
+            target="_blank">
             <i class="fab fa-facebook"></i>
           </a>
         </li>
@@ -42,7 +59,7 @@
 
 <script>
   export default {      //@-ссылка на корень проекта
-    name: "example",
+    name: "Myfooter",
     props: {
 
     },
@@ -51,13 +68,14 @@
 
       }
     },
-    mounted() {
-
-    },
     computed: {
       isWhiteTheme(){
         return !!(this.$route.name === "about" || this.$route.name === "contact")
-      }
+      },
+    mounted() {
+
+    },
+
     },
     methods: {
 
@@ -127,8 +145,8 @@
           background: #34495E
 
 
-  .menu-item-active
-    .menu-link
+  .nuxt-link-exact-active
+    &.menu-link
       &:before
         display: block
 

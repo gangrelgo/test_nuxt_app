@@ -9,18 +9,40 @@
           to claw at the fabric.
         </p>
       </div>
-      <div class="main-image-area">
-        <img class="case-pict" src="@/assets/caseimage.png">
-      </div>
+      <hooper
+        :infiniteScroll="true"
+        :shortDrag="true"
+        class="main-image-area" >
+        <slide
+          class="img-container"
+          v-for="image in pictures"
+          :key="image.id">
+          <img class="case-pict" draggable="false" :src="image.picture">
+        </slide>
+
+      </hooper>
     </div>
   </div>
 </template>
 
 <script>
+  import { Hooper, Slide } from 'hooper';
+  import 'hooper/dist/hooper.css';
   export default {
+    name: 'App',
+    components: {
+      Hooper,
+      Slide,
+    },
     data() {
-
+      return {
+        pictures: [
+          {id: 0, picture: "/img/caseimage.jpg"},
+          {id: 1, picture: "/img/caseimage-2.jpg"},
+          {id: 2, picture: "/img/caseimage-3.jpg"}
+        ]
       }
+    }
   }
 
 </script>
@@ -30,11 +52,12 @@
     margin: 168px auto auto 70px
     position: relative
     z-index: 2
+    width: 370px
     @media screen and (max-width: 1600px)
         margin: 168px auto auto -98px
-    @media screen and (max-width: 768px)
+    @media screen and (max-width: 1200px)
       text-align: center
-      margin: calc(20% - 127px ) auto 0 auto
+      margin: calc(20% - 160px ) auto 0 auto
       width: 100%
 
   .content
@@ -50,13 +73,15 @@
     font-size: 64px
     letter-spacing: 3px
     color: #FFFFFF
+    @media screen and (max-width: 1200px)
+      font-size: 50px
 
   .content-area
     padding: 0 230px 0 140px
     position: relative
     height: 100%
     width: 100%
-    @media screen and (max-width: 768px)
+    @media screen and (max-width: 1200px)
       padding: 0
 
   .case-text
@@ -68,13 +93,15 @@
     letter-spacing: 0.72px
     color: #ECF0F1
     width: 201px
-    height: 115px
-    @media screen and (max-width: 768px)
+    height: auto
+    user-select: none
+    @media screen and (max-width: 1200px)
       width: 100%
+
 
   .case-pict
     width: 100%
-    height: 100%
+    height: auto
     margin: 0
     padding: 0
 
@@ -85,18 +112,17 @@
     right: 255px
     height: 515px
     width: 900px
+    user-select: none
+    outline: none
     @media screen and (max-width: 1600px)
       left: 23%
     @media screen and (max-width: 1200px)
-      top: 156px
-      right: 255px
-      height: 343px
-      width: 580px
-    @media screen and (max-width: 768px)
       position: relative
+      margin: calc(30% - 200px) auto 0
       left: 0
       top: 0
-      width: 100%
-      height: auto
-      margin: calc(35% - 200px) auto 0
+      width: auto
+
+
+
 </style>

@@ -2,20 +2,49 @@
   <div class="content">
     <div class="half-content">
       <div class="form">
-        <form class="page-form" onsubmit="validate(event)">
-          <input id="firstField" class="text-form" required placeholder="Name">
-          <input id="secondField" type="email" class="text-form" required placeholder="E-mail">
-          <input id="thirdField" type="tel" class="text-form" required placeholder="Number">
-          <textarea id="fourthField" class="text-message" required placeholder="Message"></textarea>
-          <button type="submit" class="submit">
+        <form
+          class="page-form"
+          onsubmit="validate(event)">
+          <input
+            id="firstField"
+            class="text-form"
+            required
+            placeholder="Name">
+          <input
+            id="secondField"
+            type="email"
+            class="text-form"
+            required
+            placeholder="E-mail">
+          <input
+            id="thirdField"
+            type="tel"
+            class="text-form"
+            required
+            placeholder="Number">
+          <textarea
+            id="fourthField"
+            class="text-message"
+            required
+            placeholder="Message"></textarea>
+          <button
+            type="submit"
+            class="submit">
             <span class="sub-text"> submit </span>
-            <img class="sub-pict" src="@/assets/shape.png">
+            <img
+              class="sub-pict"
+              src="img/shape.png">
           </button>
         </form>
       </div>
     </div>
-    <div class="half-content">
-      <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A6e77977a1b9ccf03d0d59a733e0b4df13a56bd5808f353399a830b310545511a&amp;source=constructor" width="100%" height="720" frameborder="0"></iframe>
+    <div class="half-content" >
+      <iframe
+        class="map"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A6e77977a1b9ccf03d0d59a733e0b4df13a56bd5808f353399a830b310545511a&amp;source=constructor"
+        width="100%"
+        height="720"
+        frameborder="0"></iframe>
     </div>
   </div>
 </template>

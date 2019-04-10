@@ -79,13 +79,11 @@ export default {
     background: linear-gradient(to right, #34495E 0%, #34495E 49.99%, #ECF0F1 50%, #ECF0F1 100%)
     @media screen and (max-width: 1200px)
       background: #34495E
-
-    @media screen and (max-width: 768px)
-      background: #34495E
       width: 100%
       height: 100%
       .container-column-white &
         background: #ECF0F1
+
 
   .container-column-white
     background: linear-gradient(to right, #ECF0F1 0%, #ECF0F1 49.99%, #34495E 50%, #34495E 100%)
