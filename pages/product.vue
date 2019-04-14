@@ -37,7 +37,7 @@
     data() {
       return {
         pictures: [
-          {id: 0, picture: "/img/caseimage.jpg"},
+          {id: 0, picture: "/img/caseimage.png"},
           {id: 1, picture: "/img/caseimage-2.jpg"},
           {id: 2, picture: "/img/caseimage-3.jpg"}
         ]
@@ -118,10 +118,12 @@
       left: 23%
     @media screen and (max-width: 1200px)
       position: relative
-      margin: calc(30% - 200px) auto 0
+      margin: auto auto 0
       left: 0
       top: 0
       width: auto
+      max-width: 750px
+
 
 
 

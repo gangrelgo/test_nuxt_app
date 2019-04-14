@@ -91,6 +91,7 @@
     width: 100%
     position: relative
     z-index: 1
+    flex: 0 1 auto
   .half-side
     position: relative
     width: 50%

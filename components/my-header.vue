@@ -1,15 +1,17 @@
 <template>
   <div class="header">
-    <div class="half-side"></div>
+    <div class="half-side"/>
     <div class="half-side p-left-social">
-      <h2 class="page-title" :class="{'page-title-dark':isWhiteTheme}" > {{ changeTitle }}</h2>
+      <h2
+        :class="{'page-title-dark':isWhiteTheme}"
+        class="page-title"> {{ changeTitle }}</h2>
     </div>
   </div>
 </template>
 
 <script>
   export default {      //@-ссылка на корень проекта
-    name: "myHeader",
+    name: "MyHeader",
     props: {
 
     },
@@ -17,9 +19,6 @@
       return {
         titleText: "Let's get started"
       }
-    },
-    mounted() {
-
     },
     computed: {
       isWhiteTheme(){
@@ -32,6 +31,10 @@
         else return this.titleText = "Get in touch"
       }
     },
+    mounted() {
+
+    },
+
     methods: {
     }
   }
@@ -50,6 +53,7 @@
       display: flex
       justify-content: center
       z-index: 1
+      height: 20px
       @media screen and (max-width: 1200px)
         display: none
     .p-left-social
@@ -60,6 +64,7 @@
         display: block
         width: 100%
         padding: 0
+
 
   .page-title
     display: block
